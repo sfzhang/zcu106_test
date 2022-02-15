@@ -1,1 +1,3 @@
-vcu_trd.dtsi
+/include/ "system-conf.dtsi"
+/ {
+};

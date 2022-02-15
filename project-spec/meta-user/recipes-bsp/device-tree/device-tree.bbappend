@@ -1,14 +1,6 @@
 FILESEXTRAPATHS_prepend := "${THISDIR}/files:${SYSCONFIG_PATH}:"
 
-SRC_URI_append ="\
-    file://config \
-    file://common.dtsi \
-    file://system-user.dtsi \
-    file://apm.dtsi \
-    file://hdmi-misc.dtsi \
-    file://li-imx274mipi-fmc.dtsi \
-    file://0001-Workaround-to-remove-the-IP_TYPE-as-BUS-for-broadcas.patch \
-"
+SRC_URI_append = " file://config file://system-user.dtsi"
 
 python () {
     if d.getVar("CONFIG_DISABLE"):
