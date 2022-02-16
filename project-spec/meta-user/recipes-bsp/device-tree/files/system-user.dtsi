@@ -1,3 +1,11 @@
 /include/ "system-conf.dtsi"
 / {
+    chosen {
+        bootargs = "earlycon clk_ignore_unused consoleblank=0 cma=1700M uio_pdrv_genirq.of_id=generic-uio";
+        stdout-path = "serial0:115200n8";
+    };
+};
+
+&reg_0 {
+    compatible = "generic-uio";
 };
