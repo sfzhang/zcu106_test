@@ -2698,7 +2698,7 @@ CONFIG_packagegroup-core-boot=y
 #
 # packagegroup-core-ssh-dropbear 
 #
-CONFIG_packagegroup-core-ssh-dropbear=y
+# CONFIG_packagegroup-core-ssh-dropbear is not set
 # CONFIG_packagegroup-core-ssh-dropbear-dev is not set
 # CONFIG_packagegroup-core-ssh-dropbear-dbg is not set
 
@@ -3995,7 +3995,7 @@ CONFIG_u-boot-tools=y
 #
 # packagegroup-petalinux 
 #
-# CONFIG_packagegroup-petalinux is not set
+CONFIG_packagegroup-petalinux=y
 # CONFIG_packagegroup-petalinux-dbg is not set
 # CONFIG_packagegroup-petalinux-dev is not set
 
@@ -4086,7 +4086,7 @@ CONFIG_u-boot-tools=y
 #
 # packagegroup-petalinux-opencv 
 #
-# CONFIG_packagegroup-petalinux-opencv is not set
+CONFIG_packagegroup-petalinux-opencv=y
 # CONFIG_packagegroup-petalinux-opencv-dev is not set
 # CONFIG_packagegroup-petalinux-opencv-dbg is not set
 
@@ -4157,8 +4157,8 @@ CONFIG_u-boot-tools=y
 #
 # Image Features
 #
-CONFIG_imagefeature-ssh-server-dropbear=y
-# CONFIG_imagefeature-ssh-server-openssh is not set
+# CONFIG_imagefeature-ssh-server-dropbear is not set
+CONFIG_imagefeature-ssh-server-openssh=y
 CONFIG_imagefeature-hwcodecs=y
 # CONFIG_imagefeature-package-management is not set
 CONFIG_imagefeature-debug-tweaks=y
@@ -4168,7 +4168,7 @@ CONFIG_auto-login=y
 # apps 
 #
 # CONFIG_gpio-demo is not set
-# CONFIG_peekpoke is not set
+CONFIG_peekpoke=y
 CONFIG_uiotest=y
 
 #
