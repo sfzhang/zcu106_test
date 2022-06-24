@@ -1,0 +1,121 @@
+/include/ "system-conf.dtsi"
+/ {
+    chosen {
+        bootargs = "earlycon clk_ignore_unused consoleblank=0 cma=1000M uio_pdrv_genirq.of_id=generic-uio init_fatal_sh=1";
+        stdout-path = "serial0:115200n8";
+    };
+};
+
+//#if 0
+//&reg_0 {
+//    compatible = "generic-uio";
+//};
+//#endif
+
+&sdhci0 {
+    statu = "okay";
+    disable-wp;
+    no-1-8-v;
+};
+
+&sdhci1 {
+    statu = "okay";
+    disable-wp;
+    no-1-8-v;
+};
+
+&amba_pl {
+
+    /delete-node/ vcapaxis_broad_out1x2_axis_broadcaster_0; 
+    /delete-node/ vcapaxis_broad_out2x2_axis_broadcaster_0; 
+    
+    vcapaxis_broad_out1x2_axis_broadcaster_0 {
+            compatible = "xlnx,video";            
+            xlnx,atomic_streamon = <1>;
+            dma-names = "port0", "port1";
+            dmas = <&x2_v_frmbuf_wr2 0>, <&x2_v_frmbuf_wr8 0>;
+            
+            vcap_portsaxis_broad_out1x2_axis_broadcaster_0: ports {
+                #address-cells = <1>;
+                #size-cells = <0>;
+                vcap_portaxis_broad_out1x2_axis_broadcaster_0: port@0 {
+                    direction = "input";
+                    reg = <0>;
+                    x2_v_frmbuf_wr2x2_axis_broadcaster_0: endpoint {
+                        remote-endpoint = <&axis_broad_out1x2_axis_broadcaster_0>;
+                    };
+                };
+            };
+            
+            vcap_portsaxis_broad_out2x2_axis_broadcaster_0: ports {
+                #address-cells = <1>;
+                #size-cells = <0>;
+                vcap_portaxis_broad_out2x2_axis_broadcaster_0: port@0 {
+                    direction = "input";
+                    reg = <0>;
+                    x2_v_frmbuf_wr8x2_axis_broadcaster_0: endpoint {
+                        remote-endpoint = <&axis_broad_out2x2_axis_broadcaster_0>;
+                    };
+                };
+            };
+        };
+    };
+};
+
+&x2_v_frmbuf_wr2{
+    xlnx,dma-align = <32>;
+};
+
+&x2_v_frmbuf_wr8{
+    xlnx,dma-align = <32>;
+};
+
+&hdmi_rx_v_frmbuf_wr_0{
+    xlnx,dma-align = <32>;
+};
+
+&src_v_frmbuf_wr1{
+    xlnx,dma-align = <32>;
+};
+
+
+&x2_v_proc_ss_0{
+    compatible = "xlnx,v-vpss-scaler-2.2";
+};
+
+&hdmi_rx_v_proc_ss_1{
+    compatible = "xlnx,v-vpss-scaler-2.2";
+};
+
+&x2_v_tpg_2{
+    tpg_portsx2_v_tpg_2: ports {
+        /delete-node/   port@1;
+        tpg_port0x2_v_tpg_2: port@0 {
+            xlnx,video-format = <0x3>;
+            tpg_outx2_v_tpg_2: endpoint {
+                remote-endpoint = <&x2_v_proc_ss_0x2_v_tpg_2>;
+            };
+        };
+    };
+};
+
+&src_v_tpg_1 {    
+    tpg_portssrc_v_tpg_1: ports {
+        /delete-node/   port@1;
+        tpg_port0src_v_tpg_1: port@0 {
+            xlnx,video-format = <0x3>;
+            tpg_outsrc_v_tpg_1: endpoint {
+                remote-endpoint = <&src_v_frmbuf_wr1src_v_tpg_1>;
+            };
+        };
+    };
+};
+
+
+&axis_broadcaster_portsx2_axis_broadcaster_0 {
+    axis_broad_port0x2_axis_broadcaster_0: port@0 {
+    reg = <0>;
+    x2_axis_broadcaster_0x2_v_proc_ss_0: endpoint {
+        remote-endpoint = <&sca_outx2_v_proc_ss_0>;
+    };
+};

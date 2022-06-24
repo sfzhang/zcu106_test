@@ -1,0 +1,23 @@
+/include/ "system-conf.dtsi"
+/ {
+    chosen {
+        bootargs = "earlycon clk_ignore_unused consoleblank=0 cma=1000M uio_pdrv_genirq.of_id=generic-uio init_fatal_sh=1";
+        stdout-path = "serial0:115200n8";
+    };
+};
+
+&reg_0 {
+    compatible = "generic-uio";
+};
+
+&sdhci0 {
+    statu = "okay";
+    disable-wp;
+    no-1-8-v;
+};
+
+&sdhci1 {
+    statu = "okay";
+    disable-wp;
+    no-1-8-v;
+};

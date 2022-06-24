@@ -4002,7 +4002,7 @@ CONFIG_packagegroup-petalinux=y
 #
 # packagegroup-petalinux-audio 
 #
-# CONFIG_packagegroup-petalinux-audio is not set
+CONFIG_packagegroup-petalinux-audio=y
 # CONFIG_packagegroup-petalinux-audio-dbg is not set
 # CONFIG_packagegroup-petalinux-audio-dev is not set
 
@@ -4016,14 +4016,14 @@ CONFIG_packagegroup-petalinux=y
 #
 # packagegroup-petalinux-display-debug 
 #
-# CONFIG_packagegroup-petalinux-display-debug is not set
+CONFIG_packagegroup-petalinux-display-debug=y
 # CONFIG_packagegroup-petalinux-display-debug-dbg is not set
 # CONFIG_packagegroup-petalinux-display-debug-dev is not set
 
 #
 # packagegroup-petalinux-gstreamer 
 #
-# CONFIG_packagegroup-petalinux-gstreamer is not set
+CONFIG_packagegroup-petalinux-gstreamer=y
 # CONFIG_packagegroup-petalinux-gstreamer-dev is not set
 # CONFIG_packagegroup-petalinux-gstreamer-dbg is not set
 
@@ -4037,7 +4037,7 @@ CONFIG_packagegroup-petalinux=y
 #
 # packagegroup-petalinux-matchbox 
 #
-# CONFIG_packagegroup-petalinux-matchbox is not set
+CONFIG_packagegroup-petalinux-matchbox=y
 # CONFIG_packagegroup-petalinux-matchbox-dbg is not set
 # CONFIG_packagegroup-petalinux-matchbox-dev is not set
 
@@ -4051,7 +4051,7 @@ CONFIG_packagegroup-petalinux=y
 #
 # packagegroup-petalinux-multimedia 
 #
-# CONFIG_packagegroup-petalinux-multimedia is not set
+CONFIG_packagegroup-petalinux-multimedia=y
 # CONFIG_packagegroup-petalinux-multimedia-dbg is not set
 # CONFIG_packagegroup-petalinux-multimedia-dev is not set
 
@@ -4079,7 +4079,7 @@ CONFIG_packagegroup-petalinux=y
 #
 # packagegroup-petalinux-openamp 
 #
-# CONFIG_packagegroup-petalinux-openamp is not set
+CONFIG_packagegroup-petalinux-openamp=y
 # CONFIG_packagegroup-petalinux-openamp-dev is not set
 # CONFIG_packagegroup-petalinux-openamp-dbg is not set
 
@@ -4122,14 +4122,14 @@ CONFIG_packagegroup-petalinux-opencv=y
 #
 # packagegroup-petalinux-utils 
 #
-# CONFIG_packagegroup-petalinux-utils is not set
+CONFIG_packagegroup-petalinux-utils=y
 # CONFIG_packagegroup-petalinux-utils-dbg is not set
 # CONFIG_packagegroup-petalinux-utils-dev is not set
 
 #
 # packagegroup-petalinux-v4lutils 
 #
-# CONFIG_packagegroup-petalinux-v4lutils is not set
+CONFIG_packagegroup-petalinux-v4lutils=y
 # CONFIG_packagegroup-petalinux-v4lutils-dbg is not set
 # CONFIG_packagegroup-petalinux-v4lutils-dev is not set
 
@@ -4143,7 +4143,7 @@ CONFIG_packagegroup-petalinux-opencv=y
 #
 # packagegroup-petalinux-x11 
 #
-# CONFIG_packagegroup-petalinux-x11 is not set
+CONFIG_packagegroup-petalinux-x11=y
 # CONFIG_packagegroup-petalinux-x11-dev is not set
 # CONFIG_packagegroup-petalinux-x11-dbg is not set
 

@@ -1,0 +1,50 @@
+/include/ "system-conf.dtsi"
+/ {
+    chosen {
+        bootargs = "earlycon clk_ignore_unused consoleblank=0 cma=1000M uio_pdrv_genirq.of_id=generic-uio init_fatal_sh=1";
+        stdout-path = "serial0:115200n8";
+    };
+};
+
+&reg_0 {
+    compatible = "generic-uio";
+};
+
+&sdhci0 {
+    statu = "okay";
+    disable-wp;
+    no-1-8-v;
+};
+
+&sdhci1 {
+    statu = "okay";
+    disable-wp;
+    no-1-8-v;
+};
+
+&v_tpg_1 {
+    tpg_portsv_tpg_1: ports {
+        /delete-node/ port@1;
+        tpg_port0v_tpg_1: port@0 {
+            tpg_outv_tpg_1: endpoint {
+                remote-endpoint = <&v_frmbuf_wr1v_tpg_1>;
+            };
+        };
+    };
+};
+
+&v_frmbuf_wr_0 {
+    xlnx,dma-align = <32>;
+};
+
+&v_frmbuf_wr1 {
+    xlnx,dma-align = <32>;
+};
+
+&v_frmbuf_wr2 {
+    xlnx,dma-align = <32>;
+};
+
+&v_frmbuf_wr8 {
+    xlnx,dma-align = <32>;
+};
